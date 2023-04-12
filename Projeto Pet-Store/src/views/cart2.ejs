@@ -1,0 +1,119 @@
+<html lang="pt-br">
+    <head>
+		<title><%= title %> | PET STORE</title>
+        <%- include('./partials/head') %>
+	    <link rel="stylesheet" href="/stylesheets/generalStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/headerStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/cartStyle2.css"/>
+        <link rel="stylesheet" href="/stylesheets/footerStyle.css"/>
+    </head>
+    <body>
+	    <%- include('./partials/header') %>
+            <main>
+                <h1 class="titulo">Produtos Mais Vendidos</h1>
+                <div class="produtos-destaque-mae">  
+                    <div id="leftArrow1" class="vector">
+                        <img class="vector-arrow" src="/images/icons/vectorLeft.png" alt="">
+                    </div> 
+                    <div id="rowShowcaseItemAreaContainer1">
+                        <% bestSellers.forEach(function(item){ %>
+                            <div class="produtos-destaque">
+                                <img class="produtos-destaque-imagens" src="<%= item.img %>" alt="">
+                                <div class="produtos-destaques-infos">
+                                    <h3 class="produtos-destaque-textos"> <%= item.name %> </h3>
+                                    <p class="produtos-destaque-textos"> <%= item.description %> </p>
+                                    <p class="produtos-destaque-textos"> Preço: <%= item.price %></p>
+                                    <p class="produtos-destaque-textos"> <strong> Em Estoque </strong></p>
+                                    <!-- <form method="POST" class="produtos-destaque-form" action="/products/addCart">
+                                        <input readonly name="id" value="<%= // item.id_product %>" type="text" style="display:none">
+                                        <button class="adicionar-carrinho" type="submit">
+                                            Ir para Produto 
+                                        </button>
+                                    </form> -->
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div id="rightArrow1" class="vector">
+                        <img class="vector-arrow" src="/images/icons/vectorRight.png" alt="">
+                    </div> 
+                </div>
+                <h1 class="titulo" >Meu Pedido</h1>
+                <div class="pedido-pai">
+                    <div class="descricao">
+                        <p><strong>Produto</strong></p>
+                        <p><strong>Descrição</strong></p>
+                        <p><strong>Quantidade</strong></p>
+                        <p><strong>Preço</strong></p>
+                        <p><strong>Remover</strong></p>
+                    </div>
+                    <% products.forEach(function(item){ %>
+                        <div class="pedido-produto">
+                            <img class="pedido-imagen" src="<%= item.imgs[0] %>" alt="">
+                            <div class="pedido-info">                                
+                                <h3 class="pedido-info-texto"> <%= item.name %> </h3>
+                                <p class="pedido-info-texto"> Preço un.: <%= item.price %> </p>
+                                <p class="pedido-info-texto"><strong> Em Estoque </strong></p>
+                            </div>
+                            <div class="pedido-quantidade">
+                                <form class="add-qtd-button-container" method="POST" action="/cart/update?new_qtd=<%= parseInt(item.qtd) - 1 %>">
+                                    <input readonly name="id_product" value="<%= item.id_product %>" type="text" style="display:none">
+                                    <button class="add-qtd-button" id="less-qtd-button" type="submit">
+                                        <img src="/images/icons/minus-icon.svg">
+                                    </button>
+                                </form>
+                                <div class="qtd-button" id="<%= item.id_product %>"><%= item.qtd %></div>
+                                <form class="add-qtd-button-container" method="POST" action="/cart/update?new_qtd=<%= parseInt(item.qtd) + 1 %>">
+                                    <input readonly name="id_product" value="<%= item.id_product %>" type="text" style="display:none">
+                                    <button class="add-qtd-button" id="more-qtd-button" type="submit">
+                                        <img src="/images/icons/plus-icon.svg">
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="pedido-preco"><%= item.product_total %></div>
+                            <div class="pedido-remover">                                
+                                    <form action="/cart/delete/<%= item.id_product %>?_method=DELETE" method="post">
+                                        <button class="lixeira" type="submit">
+                                            <img class="lixeira-icon" src="/images/icons/trash-icon.svg" alt="">
+                                        </button>
+                                    </form>                                                   
+                            </div>                        
+                        </div>
+                    <% }) %>                    
+                </div>
+                <div class="finalizar-compra-pai">
+                    <div class="finalizar-compra-filha">                        
+                        <form class="cep-form">
+                            <!-- <label class="info-cep" for="CEP">CEP</label> -->
+                            <input class="cep-5" name="CEP" id="CEP" required pattern="\d{5}-\d{3}" placeholder="Digite aqui o seu CEP"/>
+                            <!-- -
+                            <input class="cep-3" name="CEP" id="CEP" required pattern="\d{5}-\d{3}"/> -->
+                            
+                            <button class="calcular-frete-bt" type="submit">
+                                Calcular Frete 
+                            </button>
+                        </form>
+                        <div class="info-valores">
+                            <p class="info-valores-titulo">Subtotal</p>
+                            <p class="info-valores-value" id="subtotal-value"></p>
+                        </div>
+                        <div class="info-valores">
+                            <p class="info-valores-titulo">Frete</p>
+                            <p class="info-valores-value" id="shipping-value">R$ 9,90</p>
+                        </div>
+                        <div class="info-valores">
+                            <p class="info-valores-titulo">Total</p>
+                            <p class="info-valores-value" id="total-value"></p>
+                        </div>
+                        <form method="POST" action="/cart/checkout" class="finalizar-form">
+                            <button class="finalizar-compra links" type="submit">
+                                Finalizar Compra
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        <%- include('./partials/footer') %>
+    </body>    
+    <script src="../../javascripts/cart.js"></script>
+</html>

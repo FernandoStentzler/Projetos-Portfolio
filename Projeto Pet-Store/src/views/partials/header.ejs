@@ -1,0 +1,57 @@
+<header>
+  <div class="toast-area fade-in fade-out" id="<%= toastStatus %>" >Faça login para acessar esse recurso.</div>
+  <div id="headerFirstSection" class="menu">
+    <a href="/" id="logo"></a>
+    <div id="searchBar">
+      <form action="/products/search" method="GET" id="searchBarForm">
+          <input type="text" name="word" id="searchBarArea" placeholder="Digite aqui o que procura...">
+          <button type="submit" id="searchButton"></button>
+      </form>
+    </div>
+    <div id="infoHolder">
+      <div id="login">
+        <% if(!isLogged) {%>
+          <img id="userDefaultPhoto" src="/images/profile/std-pp.png">
+          <div id="profileSection">
+            <div id="userGreeting">Olá, <a class="userGreetingLogin" href="/users/login">Faça Login</a></div>
+            <div id="userOptions">ou<a href="/users/signup" id="accountAccess">cadastre-se</a></div>
+          </div>
+        <% } else { %>
+          <img id="userPhoto" src="<%= user.avatar %>">
+          <div id="profileSection">
+            <div id="userGreeting">Olá, <%= user.first_name %></div>
+            <div><a href="/users/enter/<%= user.id_user %>" id="accountAccess">Acesse sua conta</a></div>
+          </div>
+        <% } %>
+      </div>
+      <div id="cart">
+        <div class="headerOptionsIcon" id="favoritesIcon"></div>
+        <div class="headerOptionsIcon" id="notificationIcon"></div>
+        <a href="/cart" class="headerOptionsIcon" id="cartIcon"></a>
+      </div>
+    </div>
+  </div>
+  <div id="headerSecondSection" class="menu">
+    <div id="secondSectionLeftSide">
+      <div id="locationPin"></div>
+      <div class="secondMenuButton">Informe seu CEP</div>
+    </div>
+    <div id="secondSectionRightSide" class="menu">
+      <div class="secondMenuButton">Social</div>
+      <div class="secondMenuButton">Parcerias</div>
+      <div class="secondMenuButton">Empresarial</div>
+    </div>
+  </div>
+  <div id="headerThirdSection" class="menu">
+    <div id="thirdSectionLeftSide" class="menu">
+      <a class="thirdMenuButton" href="/products/search?word=Cães">Cães</a>
+      <a class="thirdMenuButton" href="/products/search?word=Gatos">Gatos</a>
+      <a class="thirdMenuButton" href="/products/search?word=Pássaros">Pássaros</a>
+      <a class="thirdMenuButton" href="/products/search?word=Outros">Outros</a>
+    </div>
+    <div id="thirdSectionRightSide">
+      <div class="thirdMenuButtonSpecial">OFERTA RELÂMPAGO!</div>
+      <div id="promoIcon"></div>
+    </div>
+  </div>
+</header>

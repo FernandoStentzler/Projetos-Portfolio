@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Painel de Usuário | PET STORE</title>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/generalStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/headerStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/userPanelStyle2.css"/>
+    <link rel="stylesheet" href="/stylesheets/footerStyle.css"/>
+    <script type="text/javascript" src="../../javascripts/panel.js"></script>
+  </head>
+  <body>
+    <div id="blur-page" style="display:none"></div>
+    <%- include('./partials/header') %>
+    <main>
+      <div class="fade-in fade-out" id="edit-profile-modal" style="display:none">
+        <div id="edit-form-top-bar"> 
+          <div id="edit-form-title">Editar informações do usuário</div>
+          <div id="close-edit-modal"></div>
+        </div> 
+        <form id="edit-form" action="/users/edit/<%= user.id_user %>" method="POST">
+          <div id="edit-modal-main-content-container">
+            <label class="edit-form-label" for="new_name">Nome</label>
+            <input class="edit-form-input" type="text" name="first_name" id="new_name">
+            <div class="edit-form-error" id="name-error" style="display:none;">Aqui vai a informação do erro.</div>
+            
+            <label class="edit-form-label" for="new_surname">Sobrenome</label>
+            <input class="edit-form-input" type="text" name="last_name" id="new_surname">
+            <div class="edit-form-error" id="surname-error"  style="display:none;">Aqui vai a informação do erro.</div>
+            
+            <label class="edit-form-label" for="new_email">E-mail</label>
+            <input class="edit-form-input" type="email" name="email" id="new_email">
+            <div class="edit-form-error" id="email-error"  style="display:none;">Aqui vai a informação do erro.</div>
+            
+            <label class="edit-form-label" for="new_password">Senha</label>
+            <input class="edit-form-input" type="password" name="password" id="new_password">
+            <div class="edit-form-error" id="password-error"  style="display:none;">Aqui vai a informação do erro.</div>
+          </div>
+          <button id="edit-form-button">Editar</button>
+        </form>
+      </div>
+      <div id="optionsPanel">
+        <div class="profileCard">
+          <img class="profilePhoto" src="<%= user.avatar %>">
+          <div class="userName"><%= user.first_name + " " + user.last_name %></div>
+          <div class="userInfo"><%= user.email %></div>
+          <div class="profileConfig">
+            <div class="profileConfigButton" id="profileEditButton">
+              <div class="profileIcon" id="editIcon"></div>
+              <div class="profileOption">Editar</div>
+            </div>
+            <div class="profileConfigButton">
+              <div class="profileIcon" id="configIcon"></div>
+              <div class="profileOption">Preferências</div>
+            </div>
+          </div>
+        </div>
+        <div class="optionCard">
+          <div class="cardIcon" id="ordersIcon"></div>
+          <div class="cardInfo">
+            <div class="cardTitle">Pedidos</div>
+            <div class="cardDescription">Histórico, Status de Entregas, Notas Fiscais, etc.</div>
+          </div>
+        </div>
+        <div class="optionCard">
+          <div class="cardIcon" id="addressIcon"></div>
+          <div class="cardInfo">
+            <div class="cardTitle">Endereços</div>
+            <div class="cardDescription">Histórico, Status de Entregas, Notas Fiscais, etc.</div>
+          </div>
+        </div>
+        <div class="optionCard">
+          <div class="cardIcon" id="paymentIcon"></div>
+          <div class="cardInfo">
+            <div class="cardTitle">Pagamento</div>
+            <div class="cardDescription">Histórico, Status de Entregas, Notas Fiscais, etc.</div>
+          </div>
+        </div>
+        <div class="optionCard">
+          <div class="cardIcon" id="vouchersIcon"></div>
+          <div class="cardInfo">
+            <div class="cardTitle">Vouchers</div>
+            <div class="cardDescription">Histórico, Status de Entregas, Notas Fiscais, etc.</div>
+          </div>
+        </div>
+        <div class="optionCard">
+          <div class="cardIcon" id="chatIcon"></div>
+          <div class="cardInfo">
+            <div class="cardTitle">Atendimento</div>
+            <div class="cardDescription">Histórico, Status de Entregas, Notas Fiscais, etc.</div>
+          </div>
+        </div>
+      </div>
+      <div id="overviewPanel">
+        <div class="overviewTitle">Pedidos</div>
+        <div class="overviewSearchbar">
+          <form action="" method="GET" id="overviewSearchbarForm">
+            <input type="text" name="search" id="overviewSearchbarArea" placeholder="Procure seu pedido por aqui.">
+            <button type="submit" id="overviewSearchbarButton"></button>
+          </form>
+        </div>
+        <div class="overviewInfoArea">
+          <% orders.forEach((order) => { %>
+            <div class="overviewOrderCard">
+              <div class="overviewOrderCardHeader">
+                <div class="overviewOrderCardHeaderTitle">Pedido Entregue</div>
+                <div class="overviewOrderCardHeaderInfo">Código do Pedido:</div>
+                <div class="overviewOrderCardHeaderDate"><%= order.id_order %></div>
+              </div>
+              <%  order.products.forEach((product) => { %>
+                <div class="overviewOrderCardBody">
+                  <img class="overviewOrderCardBodyPic" src="<%= product.imgs[0] %>">
+                  <div class="overviewOrderCardBodyInfoHolder">
+                    <div class="overviewOrderCardBodyName"><%= product.name %></div>
+                    <div class="overviewOrderCardBodyDescription"><%= product.qtd %> unidade(s) de <%= product.price %> cada.</div>
+                  </div>
+                </div>
+              <%  }); %>
+              <div class="overviewOrderCardFooter">
+                <div class="overviewOrderCardFooterTitle">Frete:</div>
+                <div class="overviewOrderCardFooterInfo"><%= order.shipping %></div>
+                <div class="overviewOrderCardFooterTitle">Total em Produtos:</div>
+                <div class="overviewOrderCardFooterInfo"><%= order.total %></div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>

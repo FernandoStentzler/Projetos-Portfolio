@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Cadastro | PET STORE</title>
+        <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/stylesheets/generalStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/headerStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/signupStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/footerStyle.css"/>
+    </head>
+    <body>
+        <div class="toast-login fade-in fade-out" id="<%= toastStatus %>"><%= toastMessage %></div>
+        <main>
+            <div class="signup-1">
+                <div class="signupLogoHolder">
+                    <a href="/" class="logo-signup"></a>
+                </div>
+                <div class="signupFormsHolder">
+                    <h2>Cadastro</h2>
+                   <form action="/users/store" method="POST">
+                       <input value="<%= locals.old && old.first_name %>" type="text" name="first_name" id="usuarioName" placeholder="Digite aqui seu nome">
+                       <input value="<%= locals.old && old.last_name %>" type="text" name="last_name" id="usuarioName" placeholder="Digite aqui seu Sobrenome">
+                       <input value="<%= locals.old && old.email %>" type="email" name="email" id="usuarioEmail" placeholder="Digite aqui seu e-mail">
+                       <input value="<%= locals.old && old.password %>" type="password" name="password" id="senha" placeholder="Digite aqui sua senha">                       
+                       
+                       <button id="registerButton" type="submit">Cadastrar</button>
+                       <div class="fazerLogin">
+                        <label>Voce ja tem uma conta?</label>
+                        <a href="/users/login">Clique aqui.</a>
+                       </div>
+                       <% if (typeof(errors) != "undefined") { %>
+                             
+                        <ul class="list-of-errors">
+                            <% for(let error in errors){ %>
+                                <li class="error-item"> <%= errors[error].msg %></li>
+                            <% } %>            
+                        </ul>
+                    <% } %>
+                   </form>
+                </div>
+            </div>
+        </main>
+        <script src="../javascripts/signup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Login | PET STORE</title>
+        <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/stylesheets/generalStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/headerStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/loginStyle.css"/>
+        <link rel="stylesheet" href="/stylesheets/footerStyle.css"/>
+    </head>
+    <body>
+        <div class="toast-login fade-in fade-out" id="<%= toastStatus %>"><%= toastMessage %></div>
+        <main>
+            <div id="loginLogoHolder">
+                <a href="/" id="logo"></a>
+            </div>
+            <div id="loginFormsHolder">
+                <form action="/users/logar" method="POST">
+                    <input value="<%= locals.old && old.email %>" type="email" name="email" id="email" placeholder="Digite aqui seu e-mail">
+                    <input value="<%= locals.old && old.password %>" type="password" name="password" id="password" placeholder="Digite aqui sua senha">                    
+                    <button type="submit" id="loginButton">Entrar</button>
+                    <div class="forgotArea">
+                        <label>Problemas para entrar?</label>
+                        <button id="forgotButton" type="submit">Clique aqui.</button>
+                    </div>
+                    <% if (typeof(errors) != "undefined") { %>
+                        <ul class="list-of-errors">
+                            <% for(let error in errors){ %>
+                                <li class="error-item"> <%= errors[error].msg %></li>
+                            <% } %>            
+                        </ul>
+                    <% } %>
+                </form>
+                <form action="/users/signup" method="GET">
+                    <button id="signupButton">Cadastre-se</button>
+                </form>
+            </div>
+        </main>
+        <script src="../javascripts/login.js"></script>
+    </body>
+</html>

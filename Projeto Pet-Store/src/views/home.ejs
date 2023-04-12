@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Home</title>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/generalStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/headerStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/homeStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/footerStyle.css"/>
+  </head>
+ <body>
+  <div id="headerHolder">
+    <%- include('./partials/loggedHeader') %>
+  </div>
+  <main>
+   <div id="banner">
+    <section id="carousel">
+      <div id="carouselShowcase">
+        <div class="carouselButton" id="carouselLeftButton"></div>
+        <div class="carouselButton" id="carouselRightButton"></div>
+      </div>
+      <div id="carouselPosition">
+        <div class="bannerPosition"></div>
+        <div class="bannerPosition"></div>
+        <div class="bannerPosition"></div>
+        <div class="bannerPosition"></div>
+        <div class="bannerPosition"></div>
+      </div>
+    </section>
+    <section class="featuresShowcase">
+      <div class="featureHolder">
+        <div class="featureTitle">Receba em horas</div>
+        <div class="featureMore">ver regras</div>
+      </div>
+      <div class="featureHolder">
+        <div class="featureTitle">Frete Grátis Brasil</div>
+        <div class="featureMore">saiba mais</div>
+      </div>
+      <div class="featureHolder">
+        <div class="featureTitle">Até 10x sem juros</div>
+        <div class="featureMore">ver regras</div>
+      </div>
+      <div class="featureHolder">
+        <div class="featureTitle">Retire e troque na loja</div>
+        <div class="featureMore">ver regras</div>
+      </div>
+    </section>
+    <section class="showcase">
+      <div class="middleShowcase">
+        <a href="/products/search/produto" class="squareShowcase">
+          <div class="showcaseTitle">Nutrição</div>
+          <div class="showcaseImage" id="nutritionImage"></div>
+          <div class="seeMore">Veja mais ></div>
+        </a>
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Cama & Banho</div>
+          <div class="showcaseImage" id="bedImage"></div>
+          <div class="seeMore">Veja mais ></div>
+        </div>
+      </div>
+      <div class="middleShowcase">
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Beleza & Estética</div>
+          <div class="showcaseImage" id="beautyImage"></div>
+          <div class="seeMore">Veja mais ></div>
+        </div>
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Brinquedos</div>
+          <div class="showcaseImage" id="toyImage"></div>
+          <div class="seeMore">Veja mais ></div>
+        </div>
+      </div>
+    </section>
+    <section class="showcase">
+      <div class="rowShowcase">
+        <div class="showcaseTitle">Continue comprando</div>
+        <div class="rowShowcaseItemArea">
+          <a href="/products/2" class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-1"></div>
+            <div class="rowShowcaseItemTitle">Petiscão</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </a>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-2"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-3"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-4"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-5"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-6"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="showcase">
+      <div class="rowShowcase">
+        <div class="showcaseTitle">Produtos Recomendados</div>
+        <div class="rowShowcaseItemArea">
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-1"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-2"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-3"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-4"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-5"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-6"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="showcase">
+      <div class="middleShowcase">
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="firstBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="secondBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+      </div>
+      <div class="middleShowcase">
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="thirdBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="fourthBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+      </div>
+    </section>
+    <section class="doubleShowcase">
+      <div class="bigShowcase">
+        <div class="showcaseTitle">Pet Store Ensina</div>
+        <div id="videoPlayer">
+          <iframe width="925" height="500" src="https://www.youtube.com/embed/jEGivfKnkTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="longShowcase">
+        <div class="showcaseTitle">Acaba em 00:03:14</div>
+        <div class="rowShowcaseItem">
+          <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-1"></div>
+          <div class="rowShowcaseItemTitle">Nome do Item</div>
+          <div class="rowShowcaseItemDescription">R$ 19,90</div>
+        </div>
+        <div class="rowShowcaseItem">
+          <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-2"></div>
+          <div class="rowShowcaseItemTitle">Nome do Item</div>
+          <div class="rowShowcaseItemDescription">R$ 19,90</div>
+        </div>
+      </div>
+    </section>
+    <section class="showcase">
+      <div class="rowShowcase">
+        <div class="showcaseTitle">Produto Recomendado</div>
+        <div class="rowShowcaseItemArea">
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-1"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-2"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-3"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-4"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-5"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-6"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="showcase">
+      <div class="addsShowcase"></div>
+    </section>
+    <section class="showcase">
+      <div class="middleShowcase">
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="firstBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="secondBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+      </div>
+      <div class="middleShowcase">
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="thirdBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+        <div class="squareShowcase">
+          <div class="showcaseTitle">Marca em destaque</div>
+          <div class="showcaseLogo" id="fourthBrandImage"></div>
+          <div class="seeMore">Confira ></div>
+        </div>
+      </div>
+    </section>
+   </div>
+  </main>
+  <%- include('./partials/footer') %>
+ </body>
+</html>

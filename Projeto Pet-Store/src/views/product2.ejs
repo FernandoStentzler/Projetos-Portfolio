@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title><%= prod.name %> | PET STORE</title>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/generalStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/headerStyle.css"/>
+    <link rel="stylesheet" href="/stylesheets/productStyle2.css"/>
+    <link rel="stylesheet" href="/stylesheets/footerStyle.css"/>
+  </head>
+  <body>
+    <%- include('./partials/header') %>
+    <main>
+      <section class="productSession">
+        <!-- <div class="productPathText">Pet Shop > Cachorro > Ração > Ração Seca</div> -->
+        <div class="productArea">
+          <div class="photosPreview">
+            <% prod.imgs.forEach((img)=>{ %>
+              <img class="previewImage" src="<%= img %>">
+            <% }); %>
+          </div>
+          <img class="mainPhoto" src="<%= prod.imgs[0] %>">
+          <div class="infoHolder">
+            <div class="productTitle"><%= prod.name %></div>
+            <div class="productInfo">
+              <div class="productCode">Código: <%= prod.id_product %></div>
+              <a class="productInfoWord" href="#description">Ver descrição completa</a>
+              <a class="productInfoWord" href="../../products/search?word=<%= prod.name %>"><%= prod.name %></a>
+              <% //prod.category.forEach((category) => { %>
+                <!-- <a class="productInfoWord" href="../../products/search?word=<%= //category.dataValues.name %>"><%= //category.dataValues.name %></a> -->
+              <% // }); %>
+            </div>
+            <div class="productRate">
+              <div class="productRating">
+                <div class="productStars">
+                  <div class="filledRateStar"></div>
+                  <div class="filledRateStar"></div>
+                  <div class="filledRateStar"></div>
+                  <div class="filledRateStar"></div>
+                  <div class="emptyRateStar"></div>
+                </div>
+                <div class="productRatingCount"></div>
+              </div>
+              <div class="productStockInfo">Em estoque</div>
+            </div>
+            <form action="/products/addCart" method="POST" class="inputForm">
+              <div class="productOptionHolder">
+                <input readonly name="id" value="<%= prod.id_product %>" type="text" style="display:none">
+                <select name="qtd" class="productQuantity">
+                  <% for(let i=1; i < 13; i++) { %>
+                    <option value="<%= i %>"><%= i %> un.</option>
+                  <% } %>
+                </select>
+                <!-- <select name="opt" class="productOption">
+                  <option value="1">2,5 kg</option>
+                  <option value="2">5,0 kg</option>
+                  <option value="3">10,0 kg</option>
+                </select> -->
+              </div>
+              <div class="priceArea">
+                <div>Preço Unitário:</div>
+                <div class="unityPrice"><%= prod.price %></div>
+              </div>              
+              <div class="priceArea">
+                <div id="fullPrice">Preço Total:</div>
+                <div class="productPrice"></div>
+              </div>
+              <div class="productButtons">
+                <button type="submit" class="addToCartButton">Adicionar ao carrinho</button>
+              </div>
+            </form>
+            <form>
+              <div id="postalTitle">Calcular Frete</div>
+              <input type="text" name="postalCode" id="postalCodeInput" placeholder="Digite aqui seu CEP.">
+              <button type="submit" id="calculateShippingButton">Calcular</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="recomendationsSection">
+        <div class="showcaseTitle">Quem comprou, levou também...</div>
+        <div class="rowShowcaseItemArea">
+          <a href="/products/2" class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-1"></div>
+            <div class="rowShowcaseItemTitle">Petiscão</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </a>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-2"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-3"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-4"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-5"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+          <div class="rowShowcaseItem">
+            <div class="rowShowcaseItemImage" id="rowShowcaseItemImage-6"></div>
+            <div class="rowShowcaseItemTitle">Nome do Item</div>
+            <div class="rowShowcaseItemDescription">R$ 19,90</div>
+          </div>
+        </div>
+      </section>
+      <section class="descriptionSection">
+        <div class="descriptionSectionTitle" id="description">Descrição do Produto</div>
+        <div class="descriptionSectionText"><%= prod.description %></div>
+      </section>
+      <!-- <section class="specificationSection">
+        <div class="descriptionSectionTitle">Especificações Técnicas</div>
+        <div class="specificationSectionText">
+          Filhotes que vivem dentro de casa têm necessidades nutricionais especiais. 
+          A Ração Premier Ambientes Internos para Cães Filhotes - Frango e Salmão 
+          é um alimento Super Premium específico para filhotes com este estilo de vida. 
+          Sua fórmula exclusiva contém somente ingredientes nobres, 
+          conferindo excelente sabor e pelagem muito mais bonita e saudável. 
+          É um alimento completo e balanceado que satisfaz 100% das necessidades 
+          nutricionais do seu filhote, proporcionando ossos, músculos e dentes mais fortes. 
+          Por isso, não é recomendado nenhum tipo de suplementação.
+        </div>
+      </section> -->
+      <section class="ratingSection">
+        <div class="descriptionSectionTitle">Avaliações de quem comprou</div>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+  <script type="text/javascript" src="../../javascripts/product.js"></script>
+</html>

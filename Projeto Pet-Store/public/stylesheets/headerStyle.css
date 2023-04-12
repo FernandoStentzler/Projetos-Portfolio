@@ -1,0 +1,1327 @@
+header {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 3px 5px gray;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #headerFirstSection {
+    height: auto;
+    padding: 10px calc((100vw - 1320px) / 2);
+    background-color: var(--main-color);
+  }
+  
+  #logo {
+    background-image: url(../images/logos/pet-store-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 56px;
+    min-width: 250px;
+  }
+  
+  #searchBar {
+    height: 76px;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+  #searchBarForm {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-bright-color);
+    height: 56px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea {
+    background-color: var(--text-bright-color);
+    color: var(--main-color-darker);
+    font-size: 15px;
+    padding: 0 0 0 15px;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-top-left-radius: var(--big-border-size);
+    border-bottom-left-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea:focus {
+    outline: none;
+  }
+  
+  #searchButton {
+    background-image: url(../images/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: var(--text-bright-color);
+    height: 100%;
+    width: 60px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchButton:hover {
+    background-color: var(--secondary-color);
+    background-image: url(../images/icons/search-icon-hover.svg);
+    transition: 0.5s;
+  }
+  
+  #infoHolder {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+  }
+  
+  #login {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+  }
+  
+  #userPhoto {
+    height: 100%;
+    min-width: 56px;
+    border-radius: 50%;
+  }
+  
+  #profileSection {
+    display: none;
+  }
+  
+  #cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 233px;
+    padding: 0 20px 0 0;
+  }
+  
+  .headerOptionsIcon {
+    min-width: 56px;
+    height: 100%;
+    margin: 0 0 0 15px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--card-border-size);
+  }
+  
+  .headerOptionsIcon:hover {
+    background-color: var(--secondary-color);
+    fill: var(--main-color);
+    transition: 0.5s;
+  }
+  
+  #favoritesIcon {
+    background-image: url(../images/icons/heart-icon.svg);
+  }
+  
+  #notificationIcon {
+    background-image: url(../images/icons/notification-icon.svg);
+  }
+  
+  #cartIcon {
+    background-image: url(../images/icons/cart-icon.svg);
+  }
+  
+  #headerSecondSection {
+    display: none;
+  }
+  
+  #headerThirdSection {
+    width: 100%;
+    height: 48px;
+    padding: 5px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .thirdMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 10px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 5px solid var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  .thirdMenuButton:hover {
+    transition: 0.5s;
+    border-bottom: 5px solid var(--text-bright-color);
+  }
+  
+  .thirdMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  #thirdSectionLeftSide {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+  }
+  
+  #thirdSectionRightSide {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #headerFirstSection {
+    height: auto;
+    padding: 10px calc((100vw - 1320px) / 2);
+    background-color: var(--main-color);
+  }
+  
+  #logo {
+    background-image: url(../images/logos/pet-store-logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 76px;
+    min-width: 350px;
+  }
+  
+  #searchBar {
+    height: 76px;
+    width: 100%;
+    padding: 10px 80px;
+  }
+  
+  #searchBarForm {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-bright-color);
+    height: 56px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea {
+    background-color: var(--text-bright-color);
+    color: var(--main-color-darker);
+    font-size: 15px;
+    padding: 0 0 0 15px;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-top-left-radius: var(--big-border-size);
+    border-bottom-left-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea:focus {
+    outline: none;
+  }
+  
+  #searchButton {
+    background-image: url(../images/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: var(--text-bright-color);
+    height: 100%;
+    width: 60px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchButton:hover {
+    background-color: var(--secondary-color);
+    background-image: url(../images/icons/search-icon-hover.svg);
+    transition: 0.5s;
+  }
+  
+  #infoHolder {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+  }
+  
+  #login {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+  }
+  
+  #userPhoto {
+    background-image: url(../images/profile/pp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-width: 56px;
+    border-radius: 50%;
+  }
+  
+  #profileSection {
+    display: none;
+  }
+  
+  #cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 233px;
+    padding: 0 20px 0 0;
+  }
+  
+  .headerOptionsIcon {
+    min-width: 56px;
+    height: 100%;
+    margin: 0 0 0 15px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--card-border-size);
+  }
+  
+  .headerOptionsIcon:hover {
+    background-color: var(--secondary-color);
+    fill: var(--main-color);
+    transition: 0.5s;
+  }
+  
+  #favoritesIcon {
+    background-image: url(../images/icons/heart-icon.svg);
+  }
+  
+  #notificationIcon {
+    background-image: url(../images/icons/notification-icon.svg);
+  }
+  
+  #cartIcon {
+    background-image: url(../images/icons/cart-icon.svg);
+  }
+  
+  #headerSecondSection {
+    display: none;
+  }
+  
+  #headerThirdSection {
+    width: 100%;
+    height: 48px;
+    padding: 5px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .thirdMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 10px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  .thirdMenuButton:hover {
+    transition: 0.5s;
+    border-bottom: 5px solid var(--text-bright-color);
+  }
+  
+  .thirdMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  #thirdSectionLeftSide {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+  }
+  
+  #thirdSectionRightSide {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #headerFirstSection {
+    height: 80px;
+    padding: 10px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--main-color);
+  }
+  
+  #logo {
+    background-image: url(../images/logos/pet-store-logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 56px;
+    min-width: 160px;
+    margin: 0 0 0 20px;
+  }
+  
+  #searchBar {
+    height: 56px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  
+  #searchBarForm {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-bright-color);
+    height: 56px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea {
+    background-color: var(--text-bright-color);
+    color: var(--main-color-darker);
+    font-size: 15px;
+    padding: 0 0 0 15px;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-top-left-radius: var(--big-border-size);
+    border-bottom-left-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea:focus {
+    outline: none;
+  }
+  
+  #searchButton {
+    background-image: url(../images/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: var(--text-bright-color);
+    height: 100%;
+    width: 60px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchButton:hover {
+    background-color: var(--secondary-color);
+    background-image: url(../images/icons/search-icon-hover.svg);
+    transition: 0.5s;
+  }
+  
+  #infoHolder {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+  }
+  
+  #login {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+  }
+  
+  #userPhoto {
+    background-image: url(../images/profile/pp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-width: 56px;
+    border-radius: 50%;
+  }
+  
+  #profileSection {
+    display: none;
+  }
+  
+  #cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 233px;
+    padding: 0 20px 0 0;
+  }
+  
+  .headerOptionsIcon {
+    min-width: 56px;
+    height: 100%;
+    margin: 0 0 0 15px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--card-border-size);
+  }
+  
+  .headerOptionsIcon:hover {
+    background-color: var(--secondary-color);
+    fill: var(--main-color);
+    transition: 0.5s;
+  }
+  
+  #favoritesIcon {
+    background-image: url(../images/icons/heart-icon.svg);
+  }
+  
+  #notificationIcon {
+    background-image: url(../images/icons/notification-icon.svg);
+  }
+  
+  #cartIcon {
+    background-image: url(../images/icons/cart-icon.svg);
+  }
+  
+  #headerSecondSection {
+    background-color: var(--main-color);
+    height: 48px;
+    padding: 0px calc((100vw - 1320px) / 2);
+  }
+  
+  .secondMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-top-left-radius: var(--card-border-size);
+    border-top-right-radius: var(--card-border-size);
+  }
+  
+  .secondMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    border-radius: var(--card-border-size);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+  }
+  
+  #secondSectionLeftSide {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+    margin-left: 20px;
+    border-top-left-radius: var(--card-border-size);
+    border-top-right-radius: var(--card-border-size);
+    cursor: pointer;
+  }
+  
+  #secondSectionLeftSide:hover {
+    background-color: var(--main-color-darker);
+  }
+  
+  #locationPin {
+    background-image: url(../images/icons/location-pin-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  #secondSectionRightSide {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    margin-right: 20px;
+  }
+  
+  #headerThirdSection {
+    width: 100%;
+    height: 48px;
+    padding: 5px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .thirdMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 0 0 20px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  .thirdMenuButton:hover {
+    transition: 0.5s;
+    border-bottom: 5px solid var(--text-bright-color);
+  }
+  
+  .thirdMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  #thirdSectionLeftSide {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 1015px;
+  }
+  
+  #thirdSectionRightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+    border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  #thirdSectionRightSide:hover {
+    border-bottom: 5px solid var(--text-bright-color);
+    transition: 0.5s;
+  }
+  
+  #promoIcon {
+    width: 30px;
+    height: 100%;
+    background-image: url(../images/icons/promo-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #headerFirstSection {
+    height: 80px;
+    padding: 10px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--main-color);
+  }
+  
+  #logo {
+    background-image: url(../images/logos/pet-store-logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 56px;
+    min-width: 250px;
+  }
+  
+  #searchBar {
+    height: 56px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  
+  #searchBarForm {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-bright-color);
+    height: 56px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea {
+    background-color: var(--text-bright-color);
+    color: gray;
+    font-size: 15px;
+    padding: 0 0 0 15px;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-top-left-radius: var(--big-border-size);
+    border-bottom-left-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea:focus {
+    outline: none;
+  }
+  
+  #searchButton {
+    background-image: url(../images/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: var(--text-bright-color);
+    height: 100%;
+    width: 60px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchButton:hover {
+    background-color: var(--secondary-color);
+    background-image: url(../images/icons/search-icon-hover.svg);
+    transition: 0.5s;
+  }
+  
+  #infoHolder {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+  }
+  
+  #login {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+  }
+  
+  #userPhoto {
+    background-image: url(../images/profile/pp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-width: 56px;
+    border-radius: 50%;
+  }
+  
+  #profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 5px;
+    width: auto;
+  }
+  
+  #userGreeting {
+    padding: 0 0 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+  }
+  
+  #accountAccess {
+    padding: 0 0 0 5px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-bright-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  #accountAccess:hover {
+    color: var(--secondary-color);
+    transition: 0.5s;
+  }
+  
+  #cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 233px;
+    padding: 0 20px 0 0;
+  }
+  
+  .headerOptionsIcon {
+    min-width: 56px;
+    height: 100%;
+    margin: 0 0 0 15px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--card-border-size);
+  }
+  
+  .headerOptionsIcon:hover {
+    background-color: var(--secondary-color);
+    fill: var(--main-color);
+    transition: 0.5s;
+  }
+  
+  #favoritesIcon {
+    background-image: url(../images/icons/heart-icon.svg);
+  }
+  
+  #notificationIcon {
+    background-image: url(../images/icons/notification-icon.svg);
+  }
+  
+  #cartIcon {
+    background-image: url(../images/icons/cart-icon.svg);
+  }
+  
+  #headerSecondSection {
+    background-color: var(--main-color);
+    height: 48px;
+    padding: 0px calc((100vw - 1320px) / 2);
+  }
+  
+  .secondMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-top-left-radius: var(--card-border-size);
+    border-top-right-radius: var(--card-border-size);
+  }
+  
+  .secondMenuButton:hover {
+    background-color: var(--main-color-darker);
+    transition: 0.5s;
+  }
+  
+  .secondMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    border-radius: var(--card-border-size);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+  }
+  
+  #secondSectionLeftSide {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+    margin-left: 20px;
+    border-top-left-radius: var(--card-border-size);
+    border-top-right-radius: var(--card-border-size);
+  }
+  
+  #secondSectionLeftSide:hover {
+    background-color: var(--main-color-darker);
+    transition: 0.5s;
+  }
+  
+  #locationPin {
+    background-image: url(../images/icons/location-pin-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  #secondSectionRightSide {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    margin-right: 20px;
+  }
+  
+  #headerThirdSection {
+    width: 100%;
+    height: 48px;
+    padding: 5px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .thirdMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 0 0 20px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  .thirdMenuButton:hover {
+    transition: 0.5s;
+    border-bottom: 5px solid var(--text-bright-color);
+  }
+  
+  .thirdMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  #thirdSectionLeftSide {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 1015px;
+  }
+  
+  #thirdSectionRightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+    border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  #thirdSectionRightSide:hover {
+    border-bottom: 5px solid var(--text-bright-color);
+    transition: 0.5s;
+  }
+  
+  #promoIcon {
+    width: 30px;
+    height: 100%;
+    background-image: url(../images/icons/promo-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1281px) {
+  .toast-area {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 50px;
+
+    margin: 10px;
+    padding: 5px 20px;
+    border-radius: var(--card-border-size);
+
+    background-color: red;
+
+    font-size: 12px;
+    color: white;
+    white-space: nowrap;
+
+
+  }
+
+  
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #headerFirstSection {
+    height: 80px;
+    padding: 10px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--main-color);
+  }
+  
+  #logo {
+    background-image: url(../images/logos/pet-store-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 56px;
+    min-width: 250px;
+  }
+  
+  #searchBar {
+    height: 46px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  
+  #searchBarForm {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-bright-color);
+    height: 46px;
+    border-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea {
+    background-color: var(--text-bright-color);
+    color: gray;
+    font-size: 15px;
+    padding: 0 0 0 15px;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-top-left-radius: var(--big-border-size);
+    border-bottom-left-radius: var(--big-border-size);
+  }
+  
+  #searchBarArea:focus {
+    outline: none;
+  }
+  
+  #searchButton {
+    background-image: url(../images/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: var(--text-bright-color);
+    height: 100%;
+    width: 60px;
+    border-radius: var(--big-border-size);
+    cursor: pointer;
+  }
+  
+  #searchButton:hover {
+    background-color: var(--secondary-color);
+    background-image: url(../images/icons/search-icon-hover.svg);
+    transition: 0.5s;
+  }
+  
+  #infoHolder {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+  }
+  
+  #login {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+  }
+  
+  #userPhoto {
+    height: 100%;
+    min-width: 56px;
+    width: 56px;
+    border-radius: 50%;
+  }
+
+  #userDefaultPhoto {
+    height: 100%;
+    min-width: 56px;
+    width: 56px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  #profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 5px;
+    width: auto;
+  }
+  
+  #userGreeting {
+    padding: 0 0 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+  }
+
+  .userGreetingLogin {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .userGreetingLogin:hover {
+    color: var(--secondary-color);
+  }
+
+  #userOptions {
+    padding: 0 0 0 5px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-bright-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  #accountAccess {
+    padding: 0 0 0 5px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-bright-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  #accountAccess:hover {
+    color: var(--secondary-color);
+    transition: 0.5s;
+  }
+  
+  #cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 233px;
+    padding: 0 20px 0 0;
+  }
+  
+  .headerOptionsIcon {
+    min-width: 56px;
+    height: 100%;
+    margin: 0 0 0 15px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--card-border-size);
+    cursor: pointer;
+  }
+  
+  .headerOptionsIcon:hover {
+    background-color: var(--secondary-color);
+    fill: var(--main-color);
+    transition: 0.5s;
+  }
+  
+  #favoritesIcon {
+    background-image: url(../images/icons/heart-icon.svg);
+  }
+  
+  #notificationIcon {
+    background-image: url(../images/icons/notification-icon.svg);
+  }
+  
+  #cartIcon {
+    background-image: url(../images/icons/cart-icon.svg);
+  }
+  
+  #headerSecondSection {
+    background-color: var(--main-color);
+    height: 48px;
+    padding: 0px calc((100vw - 1320px) / 2);
+  }
+  
+  .secondMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-top-left-radius: var(--card-border-size);
+    border-top-right-radius: var(--card-border-size);
+    cursor: pointer;
+  }
+  
+  .secondMenuButton:hover {
+    background-color: var(--main-color-darker);
+    transition: 0.5s;
+  }
+  
+  .secondMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    border-radius: var(--card-border-size);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  #secondSectionLeftSide {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+    margin-left: 20px;
+    border-top-left-radius: var(--card-border-size);
+    border-top-right-radius: var(--card-border-size);
+  }
+  
+  #secondSectionLeftSide:hover {
+    background-color: var(--main-color-darker);
+    transition: 0.5s;
+  }
+  
+  #locationPin {
+    background-image: url(../images/icons/location-pin-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  #secondSectionRightSide {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    margin-right: 20px;
+  }
+  
+  #headerThirdSection {
+    width: 100%;
+    height: 48px;
+    padding: 5px calc((100vw - 1320px) / 2) 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .thirdMenuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 0 0 20px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 5px solid var(--secondary-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .thirdMenuButton:hover {
+    transition: 0.5s;
+    border-bottom: 5px solid var(--text-bright-color);
+  }
+  
+  .thirdMenuButtonSpecial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: var(--text-bright-color);
+    white-space: nowrap;
+    border-bottom: 2px solid var(--secondary-color);
+    cursor: pointer;
+  }
+  
+  #thirdSectionLeftSide {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 1015px;
+  }
+  
+  #thirdSectionRightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  #thirdSectionRightSide:hover {
+    border-bottom: 5px solid var(--text-bright-color);
+    transition: 0.5s;
+  }
+  
+  #promoIcon {
+    width: 30px;
+    height: 100%;
+    background-image: url(../images/icons/promo-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

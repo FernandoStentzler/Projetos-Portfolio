@@ -1,0 +1,89 @@
+@media (max-width: 561px){
+    #footer-title{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/FooterBG.png');
+        min-width: 100%;   
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+    }
+    
+    #footer-help{
+        color: white;
+        position: relative;
+        top: 20px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 20px;
+    }
+    
+    #footer-site{
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 18px;
+    }
+    
+    #footer-rights{
+        color: white;
+        font-size: 14px;
+        position: relative;
+        bottom: 20px;
+    }
+    
+    #footer-faixa-verde{
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        bottom: 0px;
+    }
+
+}
+
+@media (min-width: 562px){
+    #footer-title{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/FooterBG.png');
+    min-width: 100%;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+#footer-help{
+    color: white;
+    position: relative;
+    top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+#footer-site{
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 18px;
+}
+
+#footer-rights{
+    color: white;
+    font-size: 14px;
+    position: relative;
+    bottom: 20px;
+}
+
+#footer-faixa-verde{   
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+}
+}

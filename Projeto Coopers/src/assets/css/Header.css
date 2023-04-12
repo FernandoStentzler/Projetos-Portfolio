@@ -1,0 +1,392 @@
+@media (max-width: 1023px){
+    #logoLogin{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #navLogo{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    #miniLogo{
+        height: 50px;
+    }
+    #coopersText{
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+    }
+    #loginButton{
+        color: White;
+        background-color: Black;
+        padding: 5px 15px;
+        font-size: 22px;
+    }
+    #loginButton:hover{
+        cursor: pointer;
+        background-color: #3cacf6 ;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    #login{
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        padding: 5px;
+    }
+    
+    #presentation{
+        display: flex;
+        justify-content: space-around;
+    }
+    #presentation-text{
+        text-align: center;
+    }
+    
+    #presentation-text a {
+        color: #ffff;
+        text-decoration: none;
+    }
+    
+    #organize{
+        font-size: 72px;
+    }
+    #dailyJobs{
+        color: #4AC959;
+        font-size: 56px;
+        position: relative;
+        bottom: 40px;
+    }
+    #thingsDone{
+        font-size: 24px;
+        position: relative;
+        bottom: 60px;    
+    }
+    #buttonGotoList{
+        color: white;
+        background-color: #4AC959;
+        border: 0px;
+        padding: 5px 15px;
+        font-size: 26px;
+        position: relative;
+        bottom: 45px;
+        border-radius: 10px;
+    }
+    #buttonGotoList:hover{
+        cursor: pointer;
+        background-color: #3cacf6 ;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    #presentation-imgs{
+        display: none;
+        align-items: center;
+    }
+    #img-salaEstar{
+        display: none;
+        height: 370px;
+        position: relative;
+        left: 80px;
+        z-index: 2;
+    }
+    #logoCoopers{
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+    }
+    #seta{
+        text-align: center;
+        position: relative;
+        top: 25px;    
+    }
+    #to-do-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/blackLine.png');
+        min-width: 100%;   
+        background-size: cover;
+        background-repeat: no-repeat;    
+        height: 380px;
+        z-index: 0;       
+    }
+    #to-do{
+        color: white;
+        z-index: 1;
+        font-size: 40px;
+        text-decoration: underline #4AC959;
+        position: relative;
+        top: 15px;            
+    }
+    #to-do-text{
+        font-size: 18px;
+        color: white;
+        position: relative;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px){
+    #logoLogin{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #navLogo{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    #miniLogo{
+        height: 50px;
+    }
+    #coopersText{
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+    }
+    #loginButton{
+        color: White;
+        background-color: Black;
+        padding: 5px 15px;
+        font-size: 22px;
+    }
+    #loginButton:hover{
+        cursor: pointer;
+        background-color: #3cacf6 ;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    #login{
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        padding: 5px;
+    }
+    
+    #presentation{
+        display: flex;
+        justify-content: space-around;
+    }
+    #presentation-text{
+        text-align: center;
+    }
+    
+    #presentation-text a {
+        color: #ffff;
+        text-decoration: none;
+    }
+    
+    #organize{
+        font-size: 72px;
+    }
+    #dailyJobs{
+        color: #4AC959;
+        font-size: 56px;
+        position: relative;
+        bottom: 40px;
+    }
+    #thingsDone{
+        font-size: 24px;
+        position: relative;
+        bottom: 60px;    
+    }
+    #buttonGotoList{
+        color: white;
+        background-color: #4AC959;
+        border: 0px;
+        padding: 5px 15px;
+        font-size: 26px;
+        position: relative;
+        bottom: 45px;
+        border-radius: 10px;
+    }
+    #buttonGotoList:hover{
+        cursor: pointer;
+        background-color: #3cacf6 ;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    #presentation-imgs{        
+        display: flex;
+        align-items: center;
+    }
+
+    #logoCoopers{
+        width: 55%;
+    }
+
+    #img-salaEstar{
+        height: 370px;       
+        z-index: 2;
+    }
+    #logoCoopers{
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+    }
+    #seta{
+        text-align: center; 
+        position: relative;
+        top: 35px;   
+    }
+    #to-do-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/blackLine.png');
+        min-width: 100%;   
+        background-size: cover;
+        background-repeat: no-repeat;    
+        height: 580px;
+        z-index: 0;       
+    }
+    #to-do{
+        color: white;
+        z-index: 1;
+        font-size: 60px;
+        text-decoration: underline #4AC959;
+        position: relative;
+        top: 15px;
+           
+    }
+    #to-do-text{
+        font-size: 32px;
+        color: white;        
+    }
+}
+
+@media (min-width: 1280px){
+    #logoLogin{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #navLogo{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    #miniLogo{
+        height: 50px;
+    }
+    #coopersText{
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+    }
+    #loginButton{
+        color: White;
+        background-color: Black;
+        padding: 5px 15px;
+        font-size: 22px;
+    }
+    #loginButton:hover{
+        cursor: pointer;
+        background-color: #3cacf6 ;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    #login{
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        padding: 5px;
+    }
+    
+    #presentation{
+        display: flex;
+        justify-content: space-around;
+    }
+    #presentation-text{
+        text-align: center;
+    }
+    
+    #presentation-text a {
+        color: #ffff;
+        text-decoration: none;
+    }
+    
+    #organize{
+        font-size: 72px;
+    }
+    #dailyJobs{
+        color: #4AC959;
+        font-size: 56px;
+        position: relative;
+        bottom: 40px;
+    }
+    #thingsDone{
+        font-size: 24px;
+        position: relative;
+        bottom: 60px;    
+    }
+    #buttonGotoList{
+        color: white;
+        background-color: #4AC959;
+        border: 0px;
+        padding: 5px 15px;
+        font-size: 26px;
+        position: relative;
+        bottom: 45px;
+        border-radius: 10px;
+    }
+    #buttonGotoList:hover{
+        cursor: pointer;
+        background-color: #3cacf6 ;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+    #presentation-imgs{
+        display: flex;
+        align-items: center;
+    }
+    #img-salaEstar{
+        height: 370px;
+        position: relative;
+        left: 80px;
+        z-index: 2;
+    }
+    #logoCoopers{
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+    }
+    #seta{
+        text-align: center;    
+    }
+    #to-do-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/blackLine.png');
+        min-width: 100%;   
+        background-size: cover;
+        background-repeat: no-repeat;    
+        height: 580px;
+        z-index: 0;       
+    }
+    #to-do{
+        color: white;
+        z-index: 1;
+        font-size: 60px;
+        text-decoration: underline #4AC959;
+        position: relative;
+        bottom: 10px;    
+    }
+    #to-do-text{
+        font-size: 32px;
+        color: white;
+        position: relative; 
+        bottom: 25px;  
+    }
+}
